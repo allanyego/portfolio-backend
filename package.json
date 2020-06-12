@@ -1,0 +1,27 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/www",
+  "scripts": {
+    "start": "nodemon .",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@hapi/joi": "17.1.1",
+    "bcrypt": "5.0.0",
+    "cookie-parser": "1.4.5",
+    "cors": "2.8.5",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "jsonwebtoken": "8.5.1",
+    "mongoose": "5.9.18",
+    "morgan": "1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.4",
+    "jest": "26.0.1",
+    "supertest": "4.0.2"
+  },
+  "keywords": []
+}
