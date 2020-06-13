@@ -1,10 +1,22 @@
 const request = require("supertest");
+const mongoose = require("mongoose");
 
 const app = require("../app");
 
 jest.useFakeTimers();
 
 let admin = null;
+let testProject = {
+  title: "smart fundi",
+  url: "https://github.com/yegow/sf-server",
+  description: "the backend to the smart fundi app",
+  skills: "mongodb, mongoose, express, jwt"
+};
+
+afterAll(done =>{
+    mongoose.connection.close();
+    done();
+});
 
 test("POST /auth/login should respond with authenticated admin", async done => {
   try {
@@ -34,13 +46,6 @@ test("GET /projects should respond with an arraya", async done => {
     done(error);
   }
 });
-
-let testProject = {
-  title: "smart fundi",
-  url: "https://github.com/yegow/sf-server",
-  description: "the backend to the smart fundi app",
-  skills: "mongodb, mongoose, express, jwt"
-};
 
 test("POST /projects should respond with created project", async done => {
   try {

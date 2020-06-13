@@ -19,8 +19,9 @@
     "morgan": "1.10.0"
   },
   "devDependencies": {
-    "nodemon": "1.18.4",
+    "heroku": "^7.42.1",
     "jest": "26.0.1",
+    "nodemon": "1.18.4",
     "supertest": "4.0.2"
   },
   "keywords": []

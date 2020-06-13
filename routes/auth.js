@@ -7,7 +7,6 @@ const createResponse = require("./helpers/createResponse");
 const router = express.Router();
 
 router.post("/login", async (req, res, next) => {
-  console.log("GOT request", req.body);
   try {
     const admin = await ctrl.authenticate(req.body);
     if (!admin) {
