@@ -2,8 +2,6 @@ language: node_js
 node_js:
 - node
 dist: trusty
-env:
-- APP_SECRET=m9sUuc/VOKE9IWYWH53ptitUk/Nxp4MaQMSO66cgAcmP/NMRiYXjP7Qng8cxb4
 install:
 - npm install
 script:

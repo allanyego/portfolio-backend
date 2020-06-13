@@ -9,6 +9,11 @@ const auth = (req, res, next) => {
       const token = authorizationHeader.split(" ")[1];
       const decodedToken = jwt.verify(token, process.env.APP_SECRET);
       const { _id } = decodedToken;
+      if (!_id) {
+          return res.status(403).json(createResponse({
+              error: "Invalid auth token"
+          }));
+      }
 
       res.locals.adminId = _id;
       next();
